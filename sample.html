@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script src="data.json"></script>
+<head>
+  <title>Hello Riot.</title>
+</head>
+<body>
+<htmltag></htmltag>
+</body>
+<!-- place the custom tag anywhere inside the body -->
+<script type="riot/tag" src="riot-tags/htmltag.tag"></script>
+<!-- include riot.js -->
+<script src="js/riot+compiler.js"></script>
+<!-- mount the tag -->
+<script>riot.mount('htmltag', {data: data.domRoot.children[0]})</script>
+<!--script>riot.mount('htmltag')</script-->
+</html>

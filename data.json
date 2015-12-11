@@ -1,0 +1,45 @@
+data = {
+  "domRoot": {
+    "children": [
+      {
+        "tagName": "html",
+        "children": [
+          {
+            "tagName": "head",
+            "children": [
+              {
+                "tagName": "title",
+                "value": "Page Title"
+              }
+            ]
+          },
+          {
+            "tagName": "body",
+            "children": [
+              {
+                "tagName": "h1",
+                "value": "Hello HTML"
+              },
+              {
+                "tagName": "p1",
+                "value": "Lorem ipsum"
+              },
+              {
+                "tagName": "a",
+                "attributes": [
+                  {
+                    "attributeName": "href",
+                    "attributeValue": "http://www.google.co.jp"
+                  }
+                ],
+                "value": "Go To Google"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "focus": {
+  }
+}
