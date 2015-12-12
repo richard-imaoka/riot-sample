@@ -1,4 +1,4 @@
-<htmltag>
+<htmltag onclick={triggerHTMLUpdate}>
     <div style={"text-indent: " + 10*this.currentNestLevel + "px;"}>
         &lt{opts.data.tagName}<span each={this.attributes}>{attributeName}="{attributeValue}"</span>&gt
     </div>
@@ -62,12 +62,12 @@
 
         _toHTMLStringInner(node)
         {
-            str = "&lt" + node.tagName
+            str = "<" + node.tagName
 
             for( var i in node.attributes )
                 str += " " + node.attributes[i].attributeName + '="' + node.attributes[i].attributeValue + '"'
 
-            str += "&gt"
+            str += ">"
 
             for( var i in node.children )
                 str += "\n" + this._toHTMLStringInner(node.children[i])
@@ -76,14 +76,18 @@
               str += "\n" + node.value
 
             str += "\n"
-            str += "&lt/" + node.tagName + "&gt"
+            str += "</" + node.tagName + ">"
 
             return str
         }
 
-        this.on("updated", function(){
-            //this.observable.trigger("HTMLUpdate", this.toHTMLString())
-        })
+        triggerHTMLUpdate(){
+            if(this.currentNestLevel===0)
+                this.observable.trigger("HTMLUpdate", this.toHTMLString())
+        }
+
+        this.on("updated", this.triggerHTMLUpdate)
+
 
     </script>
 </htmltag>

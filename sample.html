@@ -6,7 +6,7 @@
 </head>
 <body>
 <htmltag id="thetag"></htmltag>
-
+<result></result>
 <!--<playground id="pl"></playground>-->
 </body>
 <!-- place the custom tag anywhere inside the body -->
@@ -18,15 +18,14 @@
 <script>
   var observable = riot.observable();
   observable.on("HTMLUpdate", function(HTMLString){
-    console.log(HTMLString)
+    console.log("OBSSSSEEEEVA")
   })
-  observable.trigger("HTMLUpdate")
 
   var data = jsondata.domRoot.children[0];
   data[ "observable" ] = observable;
 
-  riot.mount('htmltag', {data: data} )
-  riot.mount('result')
+  riot.mount('result', {observable: observable});
+  riot.mount('htmltag', {data: data} );
 
 
 </script>
