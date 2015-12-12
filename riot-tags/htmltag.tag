@@ -20,6 +20,8 @@
             border-width: 1px
         }
         div {
+            font-family: monospace;
+            font-size: 30px;
             border-style: solid;
             border-width: 1px
         }
