@@ -2,16 +2,33 @@
 <html>
 <script src="data.json"></script>
 <head>
-  <title>Hello Riot.</title>
+  <title >Hello Riot.</title>
 </head>
 <body>
-<htmltag></htmltag>
+<htmltag id="thetag"></htmltag>
+
+<!--<playground id="pl"></playground>-->
 </body>
 <!-- place the custom tag anywhere inside the body -->
 <script type="riot/tag" src="riot-tags/htmltag.tag"></script>
+<script type="riot/tag" src="riot-tags/result.tag"></script>
 <!-- include riot.js -->
 <script src="js/riot+compiler.js"></script>
 <!-- mount the tag -->
-<script>riot.mount('htmltag', {data: data.domRoot.children[0]})</script>
-<!--script>riot.mount('htmltag')</script-->
+<script>
+  var observable = riot.observable();
+  observable.on("HTMLUpdate", function(HTMLString){
+    console.log(HTMLString)
+  })
+  observable.trigger("HTMLUpdate")
+
+  var data = jsondata.domRoot.children[0];
+  data[ "observable" ] = observable;
+
+  riot.mount('htmltag', {data: data} )
+  riot.mount('result')
+
+
+</script>
+
 </html>

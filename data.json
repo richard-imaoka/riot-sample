@@ -1,4 +1,4 @@
-data = {
+jsondata = {
   "domRoot": {
     "children": [
       {
