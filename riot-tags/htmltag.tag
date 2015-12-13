@@ -15,11 +15,11 @@
     <!--<button onclick={()=>alert(this.toHTMLString())}>+</button>-->
 
     <style>
-        span {
+        htmltag span {
             border-style: solid;
             border-width: 1px
         }
-        div {
+        htmltag div {
             font-family: monospace;
             font-size: 30px;
             border-style: solid;
