@@ -2,8 +2,8 @@
  * Created by nishyu on 1/11/2016.
  */
 <html-editor>
-  <div name="aaa" class={theClass} style="font-size: 30px;" onclick={closeEditor}>
-    <div style="background-color: rgba(255, 128, 32, 1);">
+  <div name="aaa" class={theClass} style="font-size: 30px;">
+    <div style="background-color: rgba(255, 128, 32, 1);" onclick={closeEditor}>
       <span style="text-align: center; border-bottom-style: solid;">
         <i class="fa fa-angle-double-down" style="display: inline-block; width: 100%;"></i>
       </span>
