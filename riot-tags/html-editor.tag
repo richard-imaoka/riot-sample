@@ -10,7 +10,7 @@
     </div>
     <div>&ltbody&gt</div>
     <form>
-      <select style="font-size: 30px;" onBlur="" onChange="">
+      <select style="font-size: 30px;" onBlur={hey} onChange={hey}>
         <option>Hello World</option>
         <option>Hello Brother</option>
       </select>
@@ -23,6 +23,10 @@
 
     closeEditor(){
       this.theClass = "animated slideOutDown editor"
+    }
+
+    hey(e){
+      console.log(e.target.value)
     }
 
     opts.store.on('close_editor_behavior', function(){
