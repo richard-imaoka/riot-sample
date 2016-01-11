@@ -1,0 +1,21 @@
+{
+  "name": "richard-imaoka",
+  "version": "1.0.0",
+  "description": "riot sample",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch",
+    "default": "gulp default"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC"
+}
